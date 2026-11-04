@@ -1,0 +1,23 @@
+{
+  "industry": "construction",
+  "status": "proposed-needs-contrast-validation",
+  "extends": "base",
+  "tokens": {
+    "primary": "#B25D2A",
+    "onPrimary": "#FFFFFF",
+    "bg": "#FFF0E3",
+    "text": "#60351E",
+    "surface": "#FFFFFF"
+  },
+  "artifact": "project-cost-sheet",
+  "changingAllowed": [
+    "palette",
+    "illustration",
+    "artifact"
+  ],
+  "changingForbidden": [
+    "navigation",
+    "validation",
+    "data-semantics"
+  ]
+}

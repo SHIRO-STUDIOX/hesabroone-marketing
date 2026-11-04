@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "status": "proposed",
+    "description": "roles; values overridden by theme; not all tokens map 1:1 to shadcn variables"
+  },
+  "roles": [
+    "bg",
+    "surface",
+    "surfaceAlt",
+    "text",
+    "muted",
+    "primary",
+    "onPrimary",
+    "border",
+    "focus",
+    "success",
+    "warning",
+    "danger",
+    "brand",
+    "chartIncome",
+    "chartPassthrough",
+    "chartExpense"
+  ],
+  "component": {
+    "buttonPrimary": {
+      "background": "{primary}",
+      "text": "{onPrimary}"
+    },
+    "card": {
+      "background": "{surface}",
+      "border": "{border}"
+    },
+    "focusRing": {
+      "color": "{focus}"
+    },
+    "chart": {
+      "income": "{chartIncome}",
+      "passthrough": "{chartPassthrough}",
+      "expense": "{chartExpense}"
+    }
+  }
+}

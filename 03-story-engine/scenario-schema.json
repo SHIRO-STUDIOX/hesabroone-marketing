@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/hesabro/scenario.schema.v1.json",
+  "title": "Hesabro Campaign Scenario v1 (content schema)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "version",
+    "industry",
+    "themeId",
+    "campaign",
+    "landing",
+    "stories",
+    "result",
+    "activation"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^1\\.[0-9]+\\.[0-9]+$"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "themeId": {
+      "type": "string"
+    },
+    "campaign": {
+      "type": "object",
+      "required": [
+        "slug",
+        "variant"
+      ],
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "variant": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "landing": {
+      "type": "object",
+      "required": [
+        "headline",
+        "subtitle",
+        "cta",
+        "artifactId"
+      ],
+      "properties": {
+        "headline": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "cta": {
+          "type": "string"
+        },
+        "artifactId": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "stories": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "$ref": "#/$defs/story"
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": [
+        "calculatorRef",
+        "metricKeys"
+      ],
+      "properties": {
+        "calculatorRef": {
+          "type": "string"
+        },
+        "metricKeys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "disclaimer": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "activation": {
+      "type": "object",
+      "required": [
+        "cta",
+        "requiresAuth",
+        "transferAllowlist"
+      ],
+      "properties": {
+        "cta": {
+          "type": "string"
+        },
+        "requiresAuth": {
+          "type": "boolean"
+        },
+        "transferAllowlist": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excludeDemoTransactions": {
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "story": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "headline",
+        "body",
+        "componentId",
+        "dataSource",
+        "nextLabel"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "hook",
+            "narrative",
+            "interactive",
+            "insight",
+            "product",
+            "activation"
+          ]
+        },
+        "headline": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        },
+        "componentId": {
+          "type": "string"
+        },
+        "dataSource": {
+          "enum": [
+            "demo",
+            "user-input",
+            "calculated",
+            "product-description"
+          ]
+        },
+        "nextLabel": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "calculatorRef": {
+          "type": "string"
+        },
+        "validationRef": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

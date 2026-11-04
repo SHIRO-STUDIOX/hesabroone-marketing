@@ -1,0 +1,24 @@
+{
+  "status": "proposed",
+  "storyPlayer": {
+    "progressHeightPx": 4,
+    "headerHeightMinPx": 48,
+    "footerTouchTargetMinPx": 44
+  },
+  "form": {
+    "inputMinHeightPx": 48,
+    "borderRadius": "{radius.md}"
+  },
+  "card": {
+    "borderRadius": "{radius.lg}",
+    "padding": "{space.4}"
+  },
+  "chart": {
+    "minHeightPx": 140,
+    "showValueLabels": true
+  },
+  "motion": {
+    "storySlideMs": "{motion.normalMs}",
+    "respectReducedMotion": true
+  }
+}

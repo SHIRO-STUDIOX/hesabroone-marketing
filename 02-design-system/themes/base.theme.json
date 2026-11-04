@@ -1,0 +1,24 @@
+{
+  "industry": "base",
+  "status": "proposed",
+  "tokens": {
+    "brand": "#49406d",
+    "bg": "#F7F6FB",
+    "surface": "#FFFFFF",
+    "surfaceAlt": "#F3F0FF",
+    "text": "#242236",
+    "muted": "#595668",
+    "border": "#DCD8E5",
+    "focus": "#186D7A",
+    "success": "#247B55",
+    "warning": "#97651D",
+    "danger": "#B84242",
+    "chartIncome": "#176D78",
+    "chartPassthrough": "#899BA2",
+    "chartExpense": "#B84279",
+    "primary": "#49406d",
+    "onPrimary": "#FFFFFF"
+  },
+  "artifact": "financial-summary",
+  "notes": "brand colors grounded in product PRD; UI usage candidate"
+}

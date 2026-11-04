@@ -1,0 +1,23 @@
+{
+  "industry": "cafenet",
+  "status": "proposed-needs-contrast-validation",
+  "extends": "base",
+  "tokens": {
+    "primary": "#176D78",
+    "onPrimary": "#FFFFFF",
+    "bg": "#E7F4F3",
+    "text": "#103D47",
+    "surface": "#FFFFFF"
+  },
+  "artifact": "service-receipt",
+  "changingAllowed": [
+    "palette",
+    "illustration",
+    "artifact"
+  ],
+  "changingForbidden": [
+    "navigation",
+    "validation",
+    "data-semantics"
+  ]
+}

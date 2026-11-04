@@ -1,0 +1,23 @@
+{
+  "industry": "maintenance",
+  "status": "proposed-needs-contrast-validation",
+  "extends": "base",
+  "tokens": {
+    "primary": "#416A52",
+    "onPrimary": "#FFFFFF",
+    "bg": "#ECF4ED",
+    "text": "#234331",
+    "surface": "#FFFFFF"
+  },
+  "artifact": "service-work-order",
+  "changingAllowed": [
+    "palette",
+    "illustration",
+    "artifact"
+  ],
+  "changingForbidden": [
+    "navigation",
+    "validation",
+    "data-semantics"
+  ]
+}

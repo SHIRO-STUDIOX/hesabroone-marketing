@@ -1,0 +1,23 @@
+{
+  "industry": "real-estate",
+  "status": "proposed-needs-contrast-validation",
+  "extends": "base",
+  "tokens": {
+    "primary": "#735338",
+    "onPrimary": "#FFFFFF",
+    "bg": "#F6F0E8",
+    "text": "#392B21",
+    "surface": "#FFFFFF"
+  },
+  "artifact": "commission-settlement",
+  "changingAllowed": [
+    "palette",
+    "illustration",
+    "artifact"
+  ],
+  "changingForbidden": [
+    "navigation",
+    "validation",
+    "data-semantics"
+  ]
+}

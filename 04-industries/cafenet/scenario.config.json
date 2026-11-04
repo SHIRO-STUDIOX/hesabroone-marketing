@@ -1,0 +1,117 @@
+{
+  "id": "cafenet-v1",
+  "version": "1.0.0",
+  "industry": "cafenet",
+  "themeId": "cafenet",
+  "campaign": {
+    "slug": "cafenet-income",
+    "variant": "fear-a"
+  },
+  "landing": {
+    "headline": "همه پولی که می‌گیری، درآمد خودته؟",
+    "subtitle": "دخل‌وخرج یک خدمت نمونه را تجربه کن.",
+    "cta": "شروع تجربه",
+    "artifactId": "service-receipt"
+  },
+  "stories": [
+    {
+      "id": "CF-01",
+      "type": "hook",
+      "headline": "همه پولی که می‌گیری، درآمد خودته؟",
+      "body": "یک خدمت نمونه را بررسی کن.",
+      "componentId": "HookStory",
+      "dataSource": "demo",
+      "nextLabel": "شروع تجربه"
+    },
+    {
+      "id": "CF-02",
+      "type": "interactive",
+      "headline": "امروز چه کارهایی انجام دادی؟",
+      "body": "یک یا چند خدمت نمونه انتخاب کن.",
+      "componentId": "ChoiceCards",
+      "dataSource": "user-input",
+      "nextLabel": "ادامه",
+      "fields": [
+        "selectedServices"
+      ],
+      "validationRef": "services-selected"
+    },
+    {
+      "id": "CF-03",
+      "type": "narrative",
+      "headline": "یک مشتری پرداخت کرد",
+      "body": "مثال دریافتِ فرضی را ببین.",
+      "componentId": "ReceiptNarrative",
+      "dataSource": "demo",
+      "nextLabel": "بررسی دریافت"
+    },
+    {
+      "id": "CF-04",
+      "type": "interactive",
+      "headline": "چقدرش حق‌الزحمه خودته؟",
+      "body": "مبلغ و نتیجه را تغییر بده.",
+      "componentId": "MoneySplit",
+      "dataSource": "user-input",
+      "nextLabel": "ادامه",
+      "fields": [
+        "totalReceivedToman",
+        "serviceFeeToman"
+      ],
+      "calculatorRef": "cafenet-example-v1",
+      "validationRef": "money-valid"
+    },
+    {
+      "id": "CF-05",
+      "type": "interactive",
+      "headline": "هزینه انجام کار چقدر شد؟",
+      "body": "هزینه‌های مرتبط با همین مثال را ثبت کن.",
+      "componentId": "ExpensePicker",
+      "dataSource": "user-input",
+      "nextLabel": "نمایش گزارش",
+      "fields": [
+        "expenses"
+      ],
+      "validationRef": "expense-valid"
+    },
+    {
+      "id": "CF-06",
+      "type": "insight",
+      "headline": "گزارش نمونه آماده شد",
+      "body": "از دریافتی تا هزینه، شفاف ببین.",
+      "componentId": "ResultDashboard",
+      "dataSource": "calculated",
+      "nextLabel": "ادامه در حسابرو",
+      "calculatorRef": "cafenet-example-v1"
+    },
+    {
+      "id": "CF-07",
+      "type": "activation",
+      "headline": "حالا نوبت کافی‌نت خودته",
+      "body": "با اطلاعات واقعی ادامه بده.",
+      "componentId": "ActivationCTA",
+      "dataSource": "product-description",
+      "nextLabel": "ساخت دفتر واقعی"
+    }
+  ],
+  "result": {
+    "calculatorRef": "cafenet-example-v1",
+    "metricKeys": [
+      "received",
+      "serviceFee",
+      "passThrough",
+      "relatedExpenses",
+      "illustrativeSurplus"
+    ],
+    "disclaimer": "محاسبه آموزشی؛ نه سود خالص یا مالیات قطعی"
+  },
+  "activation": {
+    "cta": "ساخت دفتر واقعی کافی‌نت من",
+    "requiresAuth": true,
+    "transferAllowlist": [
+      "businessNickname",
+      "industry",
+      "selectedServices"
+    ],
+    "excludeDemoTransactions": true
+  }
+}

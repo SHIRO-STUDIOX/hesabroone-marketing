@@ -1,0 +1,23 @@
+{
+  "industry": "print-shop",
+  "status": "proposed-needs-contrast-validation",
+  "extends": "base",
+  "tokens": {
+    "primary": "#4D55AD",
+    "onPrimary": "#FFFFFF",
+    "bg": "#EEEFFC",
+    "text": "#292E69",
+    "surface": "#FFFFFF"
+  },
+  "artifact": "print-order-ticket",
+  "changingAllowed": [
+    "palette",
+    "illustration",
+    "artifact"
+  ],
+  "changingForbidden": [
+    "navigation",
+    "validation",
+    "data-semantics"
+  ]
+}
